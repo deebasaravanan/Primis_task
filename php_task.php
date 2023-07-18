@@ -93,7 +93,7 @@ class Movie
     {
         $actorsJson = [];
         foreach ($this->actors as $actorData) {
-            $actorJson = $actorData['actor']->toJson();
+            $actorJson = $actorData['actor']->movieResult();
             $actorJson['character'] = $actorData['character'];
             $actorsJson[] = $actorJson;
         }
